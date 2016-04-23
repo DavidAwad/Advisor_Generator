@@ -9,9 +9,7 @@ D15,E15 invoice start, end dates (End date is static, filled in by you)
 
 C23 Shift Invoice Dates Start
 
-To add this script, open up the invoice template
-
-tools > 
+To add this script, open up the invoice template 
 
 */
 
@@ -152,4 +150,10 @@ function WRITE_SHIFT_DATE_INDEX(){
     range = sheet.getRange(23 + i, 3);
     range.setValue(ret);
   }
+}
+
+
+function WRITE_DATA(){
+  WRITE_SHIFT_DATE_INDEX();
+  WRITE_SHIFT_TIME_INDEX();
 }
